@@ -1,2 +1,2 @@
-text = "\tThis is pretty\t\tfun.\n"
-print(text.strip())
+books, authors, genres = 14, 11, 5
+print(books)
