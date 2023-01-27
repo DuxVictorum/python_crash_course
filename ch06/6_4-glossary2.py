@@ -3,7 +3,8 @@ coding_terms = {
     'string': 'sequence of characters used to represent text',
     'number': 'numerical characters used to represent numbers',
     'list': 'a set of comma-separated values',
-    'conditional': 'statement that will execute only if the condition evaluates to true',
+    'conditional': 'statement that will execute only if '
+        'the condition evaluates to true',
     'method': 'function that belongs to an object type'
 }
 
