@@ -19,4 +19,4 @@ pets = [pet1, pet2, pet3]
 # Print out info on each pet
 print("Here are our amazing neighborhood pets:")
 for pet in pets:
-    print(f"")
+    print(f"\t{pet['owner']}'s pet is a {pet['type']} named {pet['name']}.")
