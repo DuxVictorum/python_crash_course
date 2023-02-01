@@ -4,6 +4,9 @@ while True:
     topping = input("Add a topping to your pizza?  ")
     if topping.lower() == 'quit':
         break
+    print(f"Adding {topping} to your pizza...")
     toppings.append(topping)
 
-print(toppings)
+print(f"\nYou've ordered a pizza with the following toppings:")
+for t in toppings:
+    print(f'\t{t}')
