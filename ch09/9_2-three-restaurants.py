@@ -1,4 +1,7 @@
-# Gettin' classy -- Create a class for a sample restaurant
+# Define a class to represent a restaurant
+import re
+
+
 class Restaurant:
     """Simple class for representing a restaurant"""
 
@@ -6,24 +9,21 @@ class Restaurant:
         """Initialize attributes"""
         self.name = name
         self.cuisine_type = cuisine_type
-        self.sign = "Put some pork on your fork"
     
     def describe_restaurant(self):
         """Describe the restaurant's attributes"""
         print(f"Welcome to {self.name}, home of the best "
             f"{self.cuisine_type} food around!")
-        print(f"As the sign says, {self.sign}.")
 
     def open_restaurant(self):
         print(f"{self.name} is now open.")
 
-# Create an instance of Restaurant
-waffle_house = Restaurant("Waffle House", "classic American diner")
+# Create three instances of the Restaurant class
+restaurant1 = Restaurant("Tyler's Roadhouse", 'BBQ')
+restaurant2 = Restaurant("Zinfandel Nightlight", "wine and cheese")
+restaurant3 = Restaurant("Pizza Lola", 'pizza')
 
-# Test the attributes
-print(waffle_house.cuisine_type)
-
-# Call the methods
-waffle_house.describe_restaurant()
-
-waffle_house.open_restaurant()
+# Describe each restaurant
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+restaurant3.describe_restaurant()
