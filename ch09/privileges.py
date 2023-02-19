@@ -1,5 +1,5 @@
+# Class used with Ex. 9-8
 # Module for Privileges class
-
 class Privileges:
     """Represents user privileges"""
     def __init__(self):

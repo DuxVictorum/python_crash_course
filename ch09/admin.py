@@ -1,6 +1,7 @@
+# Class used with Ex. 9-8
 from privileges import Privileges
 
-# Class to represent a system user (reusing 9_5-login_attempts.py)
+# Class to represent a system user
 class User:
     """User of a campus Unix system"""
 
