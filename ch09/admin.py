@@ -1,3 +1,5 @@
+from privileges import Privileges
+
 # Class to represent a system user (reusing 9_5-login_attempts.py)
 class User:
     """User of a campus Unix system"""
@@ -14,7 +16,7 @@ class User:
         """Print out user description"""
         print(f"Username: {self.username} -- login attempts: "
             f"{self.login_attempts}")
-        print(f"Name: {self.first_name} {self.last_name} -- {self.dept}")
+        print(f"Name: {self.first_name} {self.last_name} -- {self.dept} dept")
         if self.admin == True:
             print("\t**Admin-level user**")
 
@@ -35,25 +37,16 @@ class Admin(User):
     """Represent an admin-level user"""
     def __init__(self, first_name, last_name, username, dept, admin=True):
         super().__init__(first_name, last_name, username, dept, admin)
-        # Attribute only for admins
-        self.privileges = [
-            'can add user',
-            'can modify user',
-            'can change group ownership levels', 
-            'can get sushi delivered direct to his door'
-            ]
+
+        self.privileges = Privileges()
+            
     
-    # Method for displaying admin privileges
-    def show_privileges(self):
-        """Display list of privileges"""
-        print(f"Admin user '{self.username}' possesses the following "
-            f"privileges:")
-        for p in self.privileges:
-            print(f"  - {p}")
 
 
 # Make instance of class
-admin_1 = Admin('Mondo', 'Diaz', 'woz', 'BSF')
+admin_23 = Admin('Snuffle', 'Bear', 'snufflepuffle', 'IT')
 
-# Call method
-admin_1.show_privileges()
+# Call methods
+admin_23.describe_user()
+admin_23.greet_user()
+admin_23.privileges.show_privileges(admin_23.username)
