@@ -1,5 +1,5 @@
 # Class used with Ex. 9-8
-from privileges import Privileges
+from privileges_9_8 import Privileges
 
 # Class to represent a system user
 class User:
