@@ -11,6 +11,14 @@ for letter in letters:
 # Generate winning lottery sequence of 4 numbers or letters
 winning_ticket = ""
 for i in range(4):
-    winning_ticket += choice(list_of_nums_letters)
+    selection = choice(list_of_nums_letters)
+    winning_ticket += str(selection)
+    
+    # --> Below is my first attempt, but I refactored to get the above
+    # if isinstance(selection,int):
+    #     winning_ticket += str(selection)
+    # else:
+    #     winning_ticket += selection
 
-print(winning_ticket)
+# Print out the winning ticket
+print(f'And the winning ticket is: {winning_ticket}')
